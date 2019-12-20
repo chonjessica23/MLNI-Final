@@ -1,0 +1,161 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Solway', serif;
+}
+
+#allbuttons{
+  top: 100%;
+  position: absolute;
+}
+
+#defaultCanvas0{
+  /*flips camera*/
+  transform: scaleX(-1);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+#rect{
+  height: 20%;
+  width: 100%;
+  background-color: rgb(100, 100, 100, 0.5);
+  position: absolute;
+  z-index: 4;
+}
+
+#accurate{
+  font-size: 3em;
+  text-align: center;
+  position: absolute;
+  top: 87%;
+  left: 22%;
+  color: gainsboro;
+}
+
+.poses{
+  height: 20%;
+  width: 15%;
+  position: absolute;
+  z-index: 5;
+}
+
+.text{
+  /* em: 16px */
+  /* vw or vh */
+  color: white;
+  position: absolute;
+  font-size: 3em;
+  text-align: center;
+  z-index: 6;
+  left: 36%;
+  top: 80%;
+}
+
+.realposes{
+  position: absolute;
+  z-index: 4;
+  display: block;
+  opacity: 0;
+}
+/* cobra */
+#cobra{
+  top: 0%;
+  left: 35%;
+}
+
+#cobratext{
+  display: block;
+  opacity: 0;
+}
+
+#realcobra{
+  left: 25%;
+  height: 60%;
+  width: 50%;
+  top: 30%;
+}
+/* corpse */
+#corpse{
+  top: 0;
+  left: 16%;
+}
+
+#corpsetext{
+  display: block;
+  opacity: 0;
+}
+
+#realcorpse{
+  top: 50%;
+  left: 20%;
+}
+
+/* chair */
+#chair{
+  top: 0%;
+  left: 0%;
+}
+
+#chairtext{
+  display: block;
+  opacity: 0;
+}
+
+#realchair{
+  top: 25%;
+  left: 28%;
+  height: 80%;
+}
+/* downwards dog */
+#downwardsdog{
+  top: 0;
+  left: 80%;
+}
+
+#dogtext{
+  display: block;
+  opacity: 0;
+}
+
+#realdog{
+  top: 15%;
+  height: 110%;
+  left: 8%;
+}
+/* tree */
+#tree{
+  top: 0;
+  left: 50%;
+}
+
+#treetext{
+  display: block;
+  opacity: 0;
+}
+
+#realtree{
+  left: 30%;
+  height: 90%;
+  width: 40%;
+}
+
+/* cat */
+#cat{
+  /* top: 67%; */
+  left: 64%;
+}
+
+#cattext{
+  display: block;
+  opacity: 0;
+}
+
+#realcat{
+  top: 35%;
+  left: 25%;
+  height: 60%;
+  width: 50%;
+}

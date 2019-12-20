@@ -1,0 +1,113 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+
+  <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+  <script src="https://unpkg.com/ml5@0.3.1/dist/ml5.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <style></style>
+</head>
+
+<body>
+  <!-- images and text for yoga poses, gray rect background to show text -->
+  <div id="rect"></div>
+
+  <!-- cobra -->
+  <img src="images/cobra.png" alt="cobra" id="cobra" class="poses">
+  <p class="text" id="cobratext">Which pose is <i>Cobra Pose</i>?</p>
+  <!-- downwards dog -->
+  <img src="images/dog.png" alt="downwards dog" id="downwardsdog" class="poses">
+  <p class="text" id="dogtext">Which pose is <i>Dog Pose</i>?</p>
+  <!-- cat -->
+  <img src="images/cat.png" alt="cat" id="cat" class="poses">
+  <p class="text" id="cattext">Which pose is <i>Cat Pose</i>?</p>
+  <!-- chair -->
+  <img src="images/chair.png" alt="chair" id="chair" class="poses">
+  <p class="text" id="chairtext">Which pose is <i>Chair Pose</i>?</p>
+  <!-- corpose -->
+  <img src="images/corpse.png" alt="corpse" id="corpse" class="poses">
+  <p class="text" id="corpsetext">Which pose is <i>Corpse Pose</i>?</p>
+  <!-- tree -->
+  <img src="images/tree.png" alt="tree" id="tree" class="poses">
+  <p class="text" id="treetext">Which pose is <i>Tree Pose</i>?</p>
+
+  <!-- pose images that appear on screen -->
+  <img src="images/realtree.png" alt="realtree" id="realtree" class="realposes">
+  <img src="images/realcobra.png" alt="realcobra" id="realcobra" class="realposes">
+  <img src="images/realcorpse.png" alt="realcorpse" id="realcorpse" class="realposes">
+  <img src="images/realdog.png" alt="realdog" id="realdog" class="realposes">
+  <img src="images/realchair.png" alt="realchair" id="realchair" class="realposes">
+  <img src="images/realcat.png" alt="realcat" id="realcat" class="realposes">
+
+  <div id="accurate">
+    <p>
+      Your <b><span id="result">...</span></b> pose is <b><span id="confidence">...</span></b> accurate
+    </p>
+  </div>
+
+
+    <div id="allbuttons">
+      <!-- <div id="videoContainer"></div> -->
+      <p id="status">Loading Model...</p>
+      <div>
+        <button id="load">Load Dataset</button><br/>
+      </div>
+      <br />
+
+      <!-- left side poses -->
+      <p><span id="exampleDog">0</span> Dog examples</p>
+      <p>| Confidence in Dog is: <span id="confidenceDog">0</span></p>
+      <button id="addClassDog">Add an Example to Class Dog</button>
+      <button id="resetDog">Reset Class Dog</button>
+
+      <p><span id="exampleTree">0</span> Tree examples</p>
+      <p>| Confidence in Tree is: <span id="confidenceTree">0</span></p>
+      <button id="addClassTree">Add an Example to Class Tree</button>
+      <button id="resetTree">Reset Class Tree</button>
+
+      <p><span id="exampleCat">0</span> Cat examples</p>
+      <p>| Confidence in Cat is: <span id="confidenceCat">0</span></p>
+      <button id="addClassCat">Add an Example to Class Cat</button>
+      <button id="resetCat">Reset Class Cat</button>
+
+      <!-- right side poses -->
+      <p><span id="exampleCobra">0</span> Cobra examples</p>
+      <p>| Confidence in Cobra is: <span id="confidenceCobra">0</span></p>
+      <button id="addClassCobra">Add an Example to Class Cobra</button>
+      <button id="resetCobra">Reset Class Cobra</button>
+
+      <p><span id="exampleCorpse">0</span> Corpse examples</p>
+      <p>| Confidence in Corpse is: <span id="confidenceCorpse">0</span></p>
+      <button id="addClassCorpse">Add an Example to Class Corpse</button>
+      <button id="resetCorpse">Reset Class Corpse</button>
+
+      <p><span id="exampleChair">0</span> Chair examples</p>
+      <p>| Confidence in Chair is: <span id="confidenceChair">0</span></p>
+      <button id="addClassChair">Add an Example to Class Chair</button>
+      <button id="resetChair">Reset Class Chair</button>
+
+      <p><span id="exampleEmpty">0</span> Empty examples</p>
+      <p>| Confidence in Empty Space is: <span id="confidenceEmpty">0</span></p>
+      <button id="addClassEmpty">Add an Example to Class Empty</button>
+      <button id="resetEmpty">Reset Class Empty</button>
+
+      <p>
+        <button id="buttonPredict">Start predicting!</button><br />
+        <button id="clearAll">Clear all classes</button><br />
+      </p>
+
+      <div><button id="save">Save Dataset</button></div>
+    </div>
+
+
+
+    <script src="sketch.js"></script>
+  </body>
+
+  </html>
